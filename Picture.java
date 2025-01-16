@@ -246,7 +246,7 @@ public class Picture extends SimplePicture {
              for (int col = 0; col < width; col++){
                 pixels [row][col].setGreen(pixels[row][col].getGreen()*2/3);
                 pixels [row][col].setBlue(pixels[row][col].getBlue()*2/3);
-                pixels [row][col].setRed(pixels[row][col].getRed()*2);
+                pixels [row][col].setRed(pixels[row][col].getRed()*7/2);
           
              }
          }
