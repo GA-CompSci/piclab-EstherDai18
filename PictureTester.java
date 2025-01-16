@@ -33,7 +33,7 @@ public class PictureTester {
         // testMirrorVerticalRightToLeft();
         // testMirrorHorizontal();
         // testMirrorHorizontalBotToTop();
-        // testMirrorDiagonal();
+         testMirrorDiagonal();
 
         // ---------------
         // ACTIVITY 7
@@ -117,7 +117,7 @@ public class PictureTester {
 
     /** Method to test mirrorVertical */
     public static void testMirrorVertical() {
-        Picture caterpillar = new Picture("caterpillar.jpg");
+        Picture caterpillar = new Picture("flower2.jpg");
         caterpillar.mirrorVertical();
         caterpillar.explore();
     }
@@ -131,7 +131,7 @@ public class PictureTester {
 
     /** Method to test mirrorHorizontal */
     public static void testMirrorHorizontal() {
-        Picture cycle = new Picture("redMotorcycle.jpg");
+        Picture cycle = new Picture("redmotorcycle.jpg");
         cycle.mirrorHorizontal();
         cycle.explore();
     }
