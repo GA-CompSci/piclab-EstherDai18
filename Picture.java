@@ -446,7 +446,10 @@ public class Picture extends SimplePicture {
     /** Method to create a collage of several pictures */
     public void createCollage() {
         Picture flower2 = new Picture("flower2.jpg");
-        Picture katie = new Picture("KatieFancy.jpg")
+        Picture katie = new Picture("KatieFancy.jpg");
+        katie = katie.scale(1.5, 2.8);
+        this.copyKatie(katie, 0, 262);
+
 
         for (int row=270; row<450; row+=60){
             for (int col=160; col<600; col+=50){
@@ -454,24 +457,40 @@ public class Picture extends SimplePicture {
             }
         }
 
-        for (int row=290; row<470; row+=60){
-            for (int col=180; col<610; col+=50){
+        flower2.negate();
+        for (int row=300; row<480; row+=60){
+            for (int col=190; col<620; col+=50){
                 this.copyFlower2(flower2, row, col);
             }
         }
 
+        flower2.negate();
         for (int row=188; row<310; row+=60){
             for (int col=54; col<180; col+=50){
                 this.copyFlower2(flower2, row, col);
             }
         }
 
-        for (int row=200; row<315; row+=60){
-            for (int col=70; col<190; col+=50){
+        flower2.negate();
+        for (int row=210; row<325; row+=60){
+            for (int col=80; col<200; col+=50){
+                this.copyFlower2(flower2, row, col);
+            }
+        }
+
+        flower2.negate();
+        for (int row=35; row<206; row+=60){
+            for (int col=20; col<181; col+=50){
                 this.copyFlower2(flower2, row, col);
             }
         }
         
+        flower2.negate();
+        for (int row=50; row<190; row+=60){
+            for (int col=35; col<170; col+=50){
+                this.copyFlower2(flower2, row, col);
+            }
+        }
         
 
         this.popArt();
@@ -501,14 +520,14 @@ public class Picture extends SimplePicture {
         }
     }
 
-    public void copy(Picture fromPic, int startRow, int startCol) {
+    public void copyKatie(Picture fromPic, int startRow, int startCol) {
         Pixel fromPixel = null;
         Pixel toPixel = null;
         Pixel[][] toPixels = this.getPixels2D();
         Pixel[][] fromPixels = fromPic.getPixels2D();
-        for (int fromRow = 0, toRow = startRow; fromRow < fromPixels.length
+        for (int fromRow = 370, toRow = startRow; fromRow < fromPixels.length
                 && toRow < toPixels.length; fromRow++, toRow++) {
-            for (int fromCol = 0, toCol = startCol; fromCol < fromPixels[0].length
+            for (int fromCol = 40, toCol = startCol; fromCol < fromPixels[0].length
                     && toCol < toPixels[0].length; fromCol++, toCol++) {
                 fromPixel = fromPixels[fromRow][fromCol];
                 toPixel = toPixels[toRow][toCol];
