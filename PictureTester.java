@@ -25,7 +25,7 @@ public class PictureTester {
         // testKeepOnlyGreen();
         // testNegate();
         // testGrayscale();
-         testFixUnderwater();
+        // testFixUnderwater();
 
         // --------------
         // ACTIVITY 6
@@ -43,7 +43,7 @@ public class PictureTester {
 
         // ---------------
         // ACTIVITY 8
-        // testCollage();
+         testCollage();
 
         // ---------------
         // ACTIVITY 9
@@ -173,9 +173,9 @@ public class PictureTester {
 
     /** Method to test the collage method */
     public static void testCollage() {
-        Picture canvas = new Picture("640x480.jpg");
-        canvas.createCollage();
-        canvas.explore();
+        Picture moonsurface = new Picture("moon-surface.jpg");
+        moonsurface.createCollage();
+        moonsurface.explore();
     }
 
     /** Method to test copy */
